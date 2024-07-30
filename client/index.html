@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universalist</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <div class="logo">
+          <img src="logo.png" alt="Logo" />
+        </div>
+        <div class="title">
+          <h1>Universalist</h1>
+        </div>
+      </div>
+      <div class="menu">
+        <button class="menu-button" onclick="location.href='index.html'">
+          Home
+        </button>
+        <button class="menu-button" onclick="location.href='about.html'">
+          About
+        </button>
+      </div>
+    </header>
+    <div class="container">
+      <form id="todoForm">
+        <label for="todoInput">Add:</label><br />
+        <input
+          type="text"
+          id="todoInput"
+          placeholder="Enter anything..."
+          required
+        /><br />
+        <input type="submit" value="Add to list" class="add-task-button" />
+      </form>
+
+      <h2>List</h2>
+
+      <div class="task-box"><ul id="todoList"></ul></div>
+
+      <h2>Archived</h2>
+      <div class="task-box"><ul id="completedList"></ul></div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
